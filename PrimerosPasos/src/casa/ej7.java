@@ -1,5 +1,7 @@
 package casa;
 
+import java.util.Scanner;
+
 public class ej7 {
 	/*Crea un algoritmo que calcule la nota final de un examen tipo test, del cual se
 	solicitarán el número de respuestas correctas, incorrectas y en blanco. La
@@ -7,10 +9,25 @@ public class ej7 {
 	1 punto por cada incorrecta y 0 puntos por las respuestas en blanco*/
 	
 	public static void main(String[] args) {
-		int correctas, incorrectas, blanco;
+		
+		Scanner sc=new Scanner(System.in);
+		
+		
+		//definimos variables
+		int correctas, incorrectas, blanco, nota ;
+		
+		System.out.println("Dime  el numero de respuestas correctas");
+		correctas=sc.nextInt();
+		System.out.println("Dime  el numero de respuestas incorrectas");
+		incorrectas=sc.nextInt();
+		System.out.println("Dime  el numero de respuestas en blanco");
+		blanco=sc.nextInt();
+		
+		nota= correctas*4-incorrectas;
+		
+		System.out.println("tu nota es:" + nota  );
 		
 		
 		
 	}
-
 }
