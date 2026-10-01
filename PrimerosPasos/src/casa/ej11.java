@@ -3,41 +3,48 @@ package casa;
 import java.util.Scanner;
 
 public class ej11 {
-
-	/*
-	 * Realiza un programa que calcule la potencia de un número, dado este y su
-	 * exponente. Pueden ocurrir tres casos:  El exponente sea positivo: imprime
-	 * resultado en pantalla.  El exponente sea 0, el resultado es 1.  El
-	 * exponente sea negativo, el resultado es 1/potencia con el exponente
-	 * 
-	 * positivo
-	 */
-	public static void main(String[] args) {
-
-		Scanner sc = new Scanner(System.in);
-
-		// 1.definimos variables numero y exponente
-
-		int num, expo, pote;
-
-		// 2.pedimos valores al usuario
-
-		System.out.println("Dime el numero");
-		num = sc.nextInt();
-		System.out.println("Dime la potencia a la que lo quieres elevar");
-		expo = sc.nextInt();
-		// calcular potencia,PREGUNTAR PROFE
-
-		// si el exponente>009
-		if (expo > 0) {
-			System.out.println("el numero elevado es");
-			// si el exponente es = 0
-		} else if (expo == 0) {
-			System.out.println("cualquier numero elevado a 0 da como resultado 1 ");
-			// si el exponente es < 0
-				} else if  (expo < 0); 
-			expo = -expo;
-		System.out.println("tu numero potenciado es 1/" + num + "^" + expo);
 		
-	}
+	
+	/* La asociación de vinicultores tiene como política fijar un precio inicial al kilo de
+	 uva, la cual se clasifica en tipos (1 y 2), y además en tamaños (500 y 900).
+	 Cuando se realiza la venta del producto, ésta es de un sólo tipo y tamaño, se
+	 requiere determinar cuánto recibirá un productor por la uva que entrega en un
+	 embarque considerando lo siguiente:
+	  Si es de tipo 1, se le cargan 20 céntimos al precio inicial cuando es de
+	 tamaño 500 y 30 céntimos si es de tamaño 900.
+	  Si es de tipo 2, se rebajan 30 céntimos cuando es de tamaño 500, y 50
+	 céntimos cuando es de tamaño 900*/
+	
+public static void main(String[] args) {
+			 
+	Scanner sc=new Scanner (System.in);
+		
+	double kilo,precio,  type1, type2, tam11,tam22;
+	System.out.println("A cuanto lo quieres vender?");
+	precio=sc.nextDouble();
+	System.out.println("Cuantos kilos?");
+	kilo=sc.nextDouble();
+	type1=(precio+0.2)*kilo;
+	
+	System.out.println("Si es del tipo 1 y de tamaño 500 recibiras  "+type1+"$");
+	tam11=(precio-0.3)*kilo;
+	
+	System.out.println("Si es del tipo 2 y de tamaño 500 recibiras  "+tam11+"$");
+	
+	type2=(precio+0.3)*kilo;
+	System.out.println("Si es del tipo 1 y de tamaño 900 recibiras  "+type2+"$");
+	
+	tam22=(precio-0.5)*kilo;
+	System.out.println("Si es del tipo 2 y de tamaño 900 recibiras  "+tam22+"$");
+	
+	
+
+	
+			 
+			 
+			 
+			 
+			 
+		}
+
 }

@@ -28,14 +28,14 @@ public class ej10 {
 		expo = sc.nextInt();
 		// calcular potencia,PREGUNTAR PROFE
 
-		// si el exponente>0
+		// si el exponente>009
 		if (expo > 0) {
 			System.out.println("el numero elevado es");
 			// si el exponente es = 0
 		} else if (expo == 0) {
 			System.out.println("cualquier numero elevado a 0 da como resultado 1 ");
 			// si el exponente es < 0
-				} else if  (expo < 0); 
+				} else  if  (expo< 0); 
 			expo = -expo;
 		System.out.println("tu numero potenciado es 1/" + num + "^" + expo);
 		
