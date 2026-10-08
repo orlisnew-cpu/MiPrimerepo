@@ -11,15 +11,17 @@ public class ud3_ej2 {
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
 		
-		double sueldo=0;
-		for(int i =0;i<6;i=i+1) {
+		double sueldoT=0,sueldoI=0;
+		for(int i =0;i<3;i++) {
 			
 			System.out.println("Dime tu sueldo");
-			sueldo=sc.nextDouble();
-			sueldo=sueldo+sueldo;
+			sueldoI=sc.nextDouble();
+			sueldoT=sueldoT+sueldoI;
 		}
-		sueldo=sueldo/3;
-		System.out.println("El sueldo medio es "+ sueldo);
+		sueldoT=sueldoT/3;
+		System.out.println(sueldoT);
+		
+		
 			
 		
 	}
