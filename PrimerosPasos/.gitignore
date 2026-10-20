@@ -1,1 +1,5 @@
 /bin/
+# Configuración local de Eclipse
+.classpath
+.project
+.settings/
