@@ -19,6 +19,7 @@ public class ejclaseLeerCifras {
 
 		}
 		System.out.println("Tiene " + cont + " cifras");
+		//ej4 ,17 y 18,
 
 	}
 
