@@ -1,9 +1,9 @@
 package ud3;
 
-import java.awt.print.Printable;
 import java.util.Scanner;
 
 public class ud3_iii_6 {
+	
 //	6. Desarrolla un programa en Java que permita realizar diferentes operaciones
 //	matemáticas mediante un menú interactivo.
 //	El programa deberá mostrar el menú repetidamente hasta que el usuario
@@ -51,60 +51,8 @@ public class ud3_iii_6 {
 
 		Scanner sc = new Scanner(System.in);
 
-		int opciones = 1, operaciones=0 ,operaciones2=0 ,potencia=0;
-				
+		int  opciones = 1; double operaciones = 0, operaciones2 = 0, potencia = 1;
 
-//		System.out.println("========= CALCULADORA =========");
-//		System.out.println("1. Sumar");
-//		System.out.println("2. Restar");
-//		System.out.println("3. Multiplicar");
-//		System.out.println("4. Dividir");
-//		System.out.println("5. Calcular potencia");
-//		System.out.println("0. Salir");
-//		System.out.println("===============================");
-//		System.out.print("Elige una opción:");
-//		opciones = sc.nextInt();
-
-//		do {
-//			
-//
-//			switch (opciones) {
-//
-//			case 1:
-//				System.out.println("Has elegido sumar");
-//				
-//				
-//				break;
-//			case 2:
-//				System.out.println("Has elegido restar");
-//				break;
-//			case 3:
-//				System.out.println("Has elegido multiplicar");
-//				break;
-//			case 4:
-//				System.out.println("Has elegido dividir");
-//				break;
-//			case 5:
-//				System.out.println("Has elegido calcular potencia");
-//				break;
-//				
-//				
-//			}
-//			System.out.println("========= CALCULADORA =========");
-//			System.out.println("1. Sumar");
-//			System.out.println("2. Restar");
-//			System.out.println("3. Multiplicar");
-//			System.out.println("4. Dividir");
-//			System.out.println("5. Calcular potencia");
-//			System.out.println("0. Salir");
-//			System.out.println("===============================");
-//			System.out.print("Elige una opción:");
-//			opciones = sc.nextInt();
-//
-//		} while (opciones >0 && opciones <= 5);
-		
-		
-		
 		while (opciones > 0 && opciones <= 5) {
 			System.out.println("========= CALCULADORA =========");
 			System.out.println("1. Sumar");
@@ -120,82 +68,89 @@ public class ud3_iii_6 {
 
 			case 1:
 				System.out.println("Has elegido sumar");
-				
+
 				System.out.println("Dime el primer numero");
-				operaciones=sc.nextInt();
+				operaciones = sc.nextDouble();
 				System.out.println("Dime el segundo  numero");
-				operaciones2=sc.nextInt();
-				System.out.println(  "El resultado es : " + ( operaciones+ operaciones2) );
-				
+				operaciones2 = sc.nextDouble();
+				System.out.println("El resultado es : " + (operaciones + operaciones2));
+
 				break;
-					
+
 			case 2:
 				System.out.println("Has elegido restar");
-				
+
 				System.out.println("Dime el primer numero");
-				operaciones=sc.nextInt();
+				operaciones = sc.nextDouble();
 				System.out.println("Dime el segundo  numero");
-				operaciones2=sc.nextInt();
-				
-				if(operaciones>operaciones2) {
-					System.out.println("El resultado es :" +(operaciones- operaciones2));
-				}else if (operaciones2>operaciones ) {
-					System.out.println("El resultado es :" +(operaciones2 - operaciones));
+				operaciones2 = sc.nextDouble();
+
+				if (operaciones > operaciones2) {
+					System.out.println("El resultado es :" + (operaciones - operaciones2));
+				} else if (operaciones2 > operaciones) {
+					System.out.println("El resultado es :" + (operaciones2 - operaciones));
 				}
-				
+
 				break;
 			case 3:
 				System.out.println("Has elegido multiplicar");
-				
+
 				System.out.println("Dime el primer numero");
-				operaciones=sc.nextInt();
+				operaciones = sc.nextDouble();
 				System.out.println("Dime el segundo  numero");
-				operaciones2=sc.nextInt();
-				System.out.println(  "El resultado es : " + ( operaciones* operaciones2) );
-				
+				operaciones2 = sc.nextDouble();
+				System.out.println("El resultado es : " + (operaciones * operaciones2));
+
 				break;
 			case 4:
 				System.out.println("Has elegido dividir");
-				
+
 				System.out.println("Dime el primer numero");
-				operaciones=sc.nextInt();
+				operaciones = sc.nextDouble();
 				System.out.println("Dime el segundo  numero");
-				operaciones2=sc.nextInt();
-				
-				if(operaciones2==0) {
+				operaciones2 = sc.nextDouble();
+
+				if (operaciones2 == 0) {
 					System.out.println("Error, no se puede dividir entre 0");
-				}else {
-					System.out.println(  "El resultado es : " + ( operaciones /operaciones2) );
+				} else {
+					System.out.println("El resultado es : " + (operaciones / operaciones2));
 				}
-				
-				
+
 				break;
 			case 5:
 				System.out.println("Has elegido calcular potencia");
-				
-				System.out.println("Dime el primer numero");
-				operaciones=sc.nextInt();
-				System.out.println("Dime el segundo  numero");
-				operaciones2=sc.nextInt();
-				
-				if(operaciones2>0) {
-					 
-					
-					
-				}else if(operaciones2<0) {
-					
-				}else {
-					if(operaciones==0 ) {
-						System.out.println("La operacion no esta definida ");
-					}else {
-						System.out.println("El resultado es 1");
-					}
-					
-				}
-				
-				break;
-			}
-		}
 
+				System.out.println("Dime el primer numero");
+				operaciones = sc.nextDouble();
+				System.out.println("Dime el segundo  numero");
+				operaciones2 = sc.nextDouble();
+
+				if (operaciones2 > 0) {
+					for (int i = 0; i < operaciones2; i++) {
+						potencia *= operaciones;
+
+					}
+					System.out.println("El resultado es " + potencia);
+
+				} else if (operaciones2 < 0) {
+					for (int i = 0; i < operaciones2; i++) {
+						potencia *= operaciones;
+					}
+					System.out.println("El resultado es " + potencia);
+					
+				} else if ( operaciones == 0) {
+
+					System.out.println("La operacion no esta definida ");
+				} else {
+					System.out.println("El resultado es 1");
+				}
+
+			}
+
+			
+			
+		}
+		
 	}
+
 }
