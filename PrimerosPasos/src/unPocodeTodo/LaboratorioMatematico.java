@@ -42,26 +42,31 @@ public class LaboratorioMatematico {
 				System.out.println("Dime un numero impar entre 1 y 15 para elegir la altura de su rombo");
 				rombo = sc.nextInt();
 
-				if (rombo > 15) {
+				if ( rombo < 1 && rombo > 15) {
 					System.out.println("El numero tiene q estar entre 1 y 15, volviendo al menu...  ");
 
 				} else if (rombo % 2 == 0) {
 
 					System.out.println("El numero tiene que  ser impar, volviendo al menu  ");
 				} else if (rombo > 0 && rombo <= 15) {
-					for (int i = 1; i <= rombo; i += 2) {
-						for(int k=0;k<rombo/2;k++) {
-							System.out.print(" ");
-						}
+					for (int i = 1; i <= rombo; i =i+ 2) {
+						
 						for (int j = 1; j <= i; j++) {
+							
+							for(int k=rombo;k>=j;k-=2) {
+								System.out.print(" ");
+						}
 							
 							System.out.print("*");
 							
 						}
 						System.out.println();
 					}
-					for(int i = rombo - 2; i >= 1; i -= 2) {
+					for(int i = rombo - 2; i >= 1; i =i- 2) {
 						for (int j = 1; j <= i; j++) {
+//							for(int k=rombo;k<=j;k-=2) {
+//								System.out.println(" ");
+//							}
 							System.out.print("*");
 							
 						}

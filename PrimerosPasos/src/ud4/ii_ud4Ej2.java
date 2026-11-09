@@ -11,14 +11,14 @@ public class ii_ud4Ej2 {
 		Scanner sc = new Scanner(System.in);
 
 		double valores[] = new double[5];
-		double suma = 0;
+//		double suma = 0;
 		for (int i = 0; i < valores.length; i++) {
 			System.out.println("Dame un valor");
 			valores[i] = sc.nextDouble();
-			suma+=valores[i];
+//			suma+=valores[i];
 
 		}
-		System.out.println(suma);
-		
+//		System.out.println(suma);
+		System.out.println(valores[3]);
 		}
 	}
