@@ -4,19 +4,7 @@ import java.util.Scanner;
 
 public class LaboratorioMatematico {
 	public static void main(String[] args) {
-//		Desarrolla un programa con un menú principal que se repite hasta que el usuario elija
-//		salir. Cada opción resuelve uno de los ejercicios siguientes.
-//		=== LABORATORIO MATEMÁTICO ===
-//		1. Rombo de asteriscos
-//		2. Primos gemelos
-//		3. Secuencia de Collatz
-//		4. Números amigos
-//		5. Decimal a binario
-//		6. Adivino tu número
-//		0. Salir
 
-		// creo el bucle con while para que el menu se repita infinitamente hasta q se
-		// pulse 0
 
 		Scanner sc = new Scanner(System.in);
 		int menu = 1;
@@ -32,16 +20,13 @@ public class LaboratorioMatematico {
 			System.out.println("0. Salir");
 			System.out.print("Elija una opción: ");
 			menu = sc.nextInt();
-			// Para hacer el menu hago un Switch con las opciones disponibles
+		
 			switch (menu) {
 
 			case 1:
 				int a = 1;
 
-//				1. Rombo de asteriscos
-//				El usuario pasará por teclado un número impar entre 1 y 15 y se deberá dibujar un
-//				rombo con esa altura.
-//				Ejemplo, para n = 5
+
 				System.out.println("Dime un numero impar entre 1 y 15 para elegir la altura de su rombo");
 				a = sc.nextInt();
 
@@ -51,8 +36,8 @@ public class LaboratorioMatematico {
 					System.out.println("El numero tiene que ser impar, volviendo al menu...");
 				} else {
 
-					for (int i = 1; i <= a; i =i+ 2) {
-						for (int j = a; j > i; j =j- 2) {
+					for (int i = 1; i <= a; i = i + 2) {
+						for (int j = a; j > i; j = j - 2) {
 							System.out.print(" ");
 						}
 
@@ -63,8 +48,8 @@ public class LaboratorioMatematico {
 						System.out.println();
 					}
 
-					for (int i = a - 2; i >= 1; i =i- 2) {
-						for (int j = a; j > i; j =j- 2) {
+					for (int i = a - 2; i >= 1; i = i - 2) {
+						for (int j = a; j > i; j = j - 2) {
 							System.out.print(" ");
 						}
 
@@ -217,38 +202,30 @@ public class LaboratorioMatematico {
 				break;
 			case 6:
 				System.out.println("6. Adivino tu número");
-	
-					int nump=0,max=1000,min=1,vuelta=0;
-					String valor="";
-					
-					
 
-					while(vuelta < 10) {
+				int nump = 0, max = 1000, min = 1, vuelta = 0;
+				String valor = "";
 
-					    nump = (int)(min + Math.random() * (max - min + 1));
+				while (vuelta < 10) {
+					nump = (int) (min + Math.random() * (max - min + 1));
+					System.out.println("Tu numero es?: " + nump);
+					valor = sc.next();
+					vuelta++;
 
-					    System.out.println("Tu numero es?: " + nump);
-					    valor = sc.next();
-
-					    vuelta++;
-
-					    if(valor.equals("si")) {
-					        System.out.println("Acertaste " + nump + " es mi numero");
-					        System.out.println("Intentos: " + vuelta);
-					        vuelta = 10;
-					    }
-					    else if(valor.equals("mayor")) {
-					        min = nump + 1;
-					    }
-					    else if(valor.equals("menor")) {
-					        max = nump - 1;
-					    }
-
-					    if(min > max) {
-					        System.out.println("Has hecho trampa");
-					        vuelta = 10;
-					    }
+					if (valor.equals("si")) {
+						System.out.println("Acertaste " + nump + " es mi numero");
+						System.out.println("Intentos: " + vuelta);
+						vuelta = 10;
+					} else if (valor.equals("mayor")) {
+						min = nump + 1;
+					} else if (valor.equals("menor")) {
+						max = nump - 1;
 					}
+					if (min > max) {
+						System.out.println("Has hecho trampa");
+						vuelta = 10;
+					}
+				}
 
 				break;
 			case 0:
