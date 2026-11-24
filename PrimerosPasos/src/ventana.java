@@ -101,7 +101,7 @@ public class ventana {
 		btnNewButton.setBounds(163, 334, 88, 22);
 		frame.getContentPane().add(btnNewButton);
 		
-		JButton btnNewButton_1 = new JButton("Registrar ");
+		JButton btnNewButton_1 = new JButton("Cancelar");
 		btnNewButton_1.setBackground(Color.LIGHT_GRAY);
 		btnNewButton_1.setBounds(366, 334, 88, 22);
 		frame.getContentPane().add(btnNewButton_1);
