@@ -2,7 +2,7 @@ package ud4;
 
 import java.util.Scanner;
 
-public class iv_1 {
+public class ExamenArrays {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		final int MAX = 20;
