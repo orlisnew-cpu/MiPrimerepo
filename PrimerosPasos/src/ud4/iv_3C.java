@@ -19,13 +19,14 @@ public class iv_3C {
 		
 		}
 		primero=inter[0];
-		ultimo=inter[5];
+		ultimo=inter[inter.length-1];
 		
+		inter[0]=ultimo;
+		inter[inter.length-1]=primero;
 				
 		for(int i=0;i<inter.length;i++) {
-			inter[0]=ultimo;
-			inter[5]=primero;
-			System.out.print(inter[i]);
+			
+			System.out.print(inter[i]+" ");
 		}
 
 	}

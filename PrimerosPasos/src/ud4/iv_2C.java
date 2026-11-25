@@ -12,18 +12,18 @@ public class iv_2C {
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
 		
-		int izquierda[] = new int[5];
+		int izquierda[] = {1,2,3,4,5};
 		 int primero=0;
-		 for(int i=0;i<izquierda.length;i++) {
-			 System.out.println("Valor? :");
-			 izquierda[i]=sc.nextInt();
-		 }
+//		 for(int i=0;i<izquierda.length;i++) {
+//			 System.out.println("Valor? :");
+//			 izquierda[i]=sc.nextInt();
+//		 }
 		 primero=izquierda[0];
 		 
 		 for(int i=0;i<izquierda.length-1;i++) {
 			 izquierda[i]=izquierda[i+1];
 		 }
-		 izquierda[4]=primero;
+		 izquierda[izquierda.length-1]=primero;
 		for(int i =0;i<izquierda.length;i++) {
 			System.out.println(izquierda[i]);
 		}

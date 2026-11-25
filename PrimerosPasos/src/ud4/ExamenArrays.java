@@ -36,28 +36,20 @@ public class ExamenArrays {
 		valores[1] = b;
 		valores[2] = c;
 
-//		for (int i = 0; i < valores.length; i++) {
-//
-//		}
 		for (int i = 3; i < valores.length; i++) {
 			suma = valores[i - 3] + valores[i - 2] + valores[i - 1];
 			valores[i] = suma;
 
 		}
 
-//		for (int i = 4; i < valores.length; i++) {
-//
-//			valores[i] = suma;
-//
-//		}
 		for (int i = 0; i < valores.length; i++) {
 			System.out.println(valores[i]);
 		}
 		System.out.println("Dime un numero y te dire si aparece en el array");
 		num = sc.nextInt();
-		for (int i = 0; i < valores.length; i++) {
-			if (num == valores[i]) {
-				System.out.println("El numero " + num + " se encuentra en la posicion " + i);
+		for (int i = 0; (i < valores.length && cont!=500); i++) {
+			if (num == valores[i] && cont!=500) {
+				System.out.println("El numero " + num + " se encuentra en la posicion " + (i+1));
 				cont = 500;
 			}
 

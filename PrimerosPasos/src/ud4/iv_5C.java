@@ -8,7 +8,7 @@ public class iv_5C {
 	public static void main(String[] args) {
 		int cambio[] = { 1, 2, 3, 4, 5, 6 };
 		int temp1 = cambio[cambio.length-2];
-		int temp2=cambio[cambio.length-1];;
+		int temp2=cambio[cambio.length-1];
 //		temp1=cambio[cambio.length-2];
 //		temp2=cambio[cambio.length-1];
 		for (int i = cambio.length - 1; i > 1; i--) {

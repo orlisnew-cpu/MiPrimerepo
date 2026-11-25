@@ -17,7 +17,7 @@ public class iv_1C {
 			valores[i] = sc.nextInt();
 		}
 		ultimo=valores[valores.length-1];
-		for (int i = 4; i>0; i--) {
+		for (int i = valores.length-1; i>0; i--) {
 			valores[i] = valores[i - 1];
 			
 		}
