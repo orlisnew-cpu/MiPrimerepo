@@ -14,29 +14,23 @@ public class iv_7 {
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
 		
-		int sola[]=new int[10];
+		int mitad[]=new int [10];
 		int num=0,posi=0;
-		for(int i =0;i<sola.length/2;i++) {
-			
-			System.out.println("Valores?: ");
-			sola[i]=sc.nextInt();
-			
-			
+		for(int i=0;i<mitad.length/2;i++) {
+			System.out.println();
+			mitad[i]=sc.nextInt();
 		}
-		
-		
-		System.out.println("NUMERO?:");
+		System.out.println("Dime un numero");
 		num=sc.nextInt();
-		System.out.println("posi?: ");
+		System.out.println("Dime una posi");
 		posi=sc.nextInt();
-		
-		for(int i=posi;i<sola.length;i++) {
-			sola[i]=sola[i+1];
-			System.out.println(sola[i]);
+		for(int i=mitad.length-1;i>posi;i--) {
+			mitad[i]=mitad[i-1];
 		}
-		
-		
-		
+		mitad[posi]=num;
+		for(int i=0;i<mitad.length;i++) {
+			System.out.println(mitad[i]);
+		}
 	}
 
 }
